@@ -43,7 +43,7 @@ const products = [
     name: 'Fiat Uno 2023',
     category: 'carro',
     price: 50000,
-    img: 'https://quatrorodas.abril.com.br/wp-content/uploads/2022/02/fiat-uno-2022.jpg'
+    <img src="img/fiat-uno" alt="">
   },
   {
     id: 7,
