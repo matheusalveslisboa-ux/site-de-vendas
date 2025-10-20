@@ -43,7 +43,7 @@ const products = [
     name: 'Fiat Uno 2023',
     category: 'carro',
     price: 50000,
-    <img src="img/fiat-uno" alt="">
+    img:fiat-uno
   },
   {
     id: 7,
