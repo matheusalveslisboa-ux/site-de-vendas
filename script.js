@@ -18,6 +18,23 @@ const products = [
     { id: "4", name: "Suculenta", price: 39.90, img: "https://images.unsplash.com/photo-1597013413842-8f41b1e69810?w=600" },
     { id: "5", name: "Bambu da Sorte", price: 49.90, img: "https://images.unsplash.com/photo-1611902771487-f7e5b231710d?w=600" },
     { id: "6", name: "Palmeira Areca", price: 179.90, img: "https://images.unsplash.com/photo-1599301713371-212478d2c92f?w=600" },
-    { id: "7", name: "Ficus", price: 89.90, img: "https://images.unsplash.com/photo-1607075772697-c52e5a78e943?w=600" },
-    { id: "8", name: "Lírio da Paz", price: 69.90, img: "https://images.unsplash.com/photo-1572293191159-fba0cd2f61f7?w=600" },
-    { id: "9", name: "Lavanda", price: 59
+];
+
+// CARRINHO
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+function saveCart() {
+    localStorage.setItem("cart", JSON.stringify(cart));
+}
+
+function updateCartCount() {
+    const total = cart.reduce((acc, item) => acc + item.qty, 0);
+    cartCountEl.textContent = total;
+}
+
+// FORMATADOR
+function formatBRL(n) {
+    return n.toFixed(2).replace(".", ",");
+}
+
+// RENDERIZAR PRODUTOS
