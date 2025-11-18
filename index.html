@@ -1,91 +1,52 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Verde Vida - Loja de Plantas</title>
-    <link rel="stylesheet" href="styles.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Loja de Plantas</title>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>🌿 Verde Vida</h1>
+<header class="site-header">
+    <div class="container">
+        <h1 class="logo">PlantaViva</h1>
         <nav>
-            <ul>
-                <li><a href="#">Início</a></li>
-                <li><a href="#">Plantas</a></li>
-                <li><a href="#">Contato</a></li>
-            </ul>
+            <button id="cart-btn" aria-label="Abrir carrinho">Carrinho (<span id="cart-count">0</span>)</button>
         </nav>
-        <div id="carrinho-icon">
-            🛒 <span id="contador-carrinho">0</span>
+    </div>
+</header>
+
+<main class="container">
+    <section class="hero">
+        <h2>Plantas para deixar sua casa ainda mais verde</h2>
+        <p>Escolha entre as melhores plantas para decorar seu lar.</p>
+    </section>
+
+    <section class="products" id="products"></section>
+</main>
+
+<!-- Modal Carrinho -->
+<div id="cart-modal" class="modal hidden" role="dialog" aria-hidden="true">
+    <div class="modal-content">
+        <button id="close-cart" class="close-btn">×</button>
+        <h3>Seu Carrinho</h3>
+        <ul id="cart-items" class="cart-items"></ul>
+        <div class="cart-summary">
+            <strong>Total: R$ <span id="cart-total">0.00</span></strong>
         </div>
-    </header>
+        <div class="cart-actions">
+            <button id="clear-cart">Limpar carrinho</button>
+            <button id="checkout">Finalizar compra</button>
+        </div>
+    </div>
+</div>
 
-    <main>
-        <section class="produtos">
+<footer class="site-footer">
+    <div class="container">
+        <p>© <span id="year"></span> PlantaViva — Todos os direitos reservados.</p>
+    </div>
+</footer>
 
-            <!-- Samambaia -->
-            <div class="produto">
-                <img src="https://terral.agr.br/plus/modulos/noticias/ler.php?cdnoticia=21" alt="Samambaia">
-                <h2>Samambaia</h2>
-                <p>R$ 25,00</p>
-                <button onclick="adicionarAoCarrinho('Samambaia', 25)">Adicionar ao carrinho</button>
-            </div>
-
-            <!-- Cacto -->
-            <div class="produto">
-                <img scr="57962777-469f-4849-abaf-944476398ff4.jpg" alt="Cacto">
-                <h2>Cacto</h2>
-                <p>R$ 15,00</p>
-                <button onclick="adicionarAoCarrinho('Cacto', 15)">Adicionar ao carrinho</button>
-            </div>
-
-            <!-- Suculenta -->
-            <div class="produto">
-                <img src="https://images.unsplash.com/photo-1605003172534-2b3b9c4829d3?auto=format&fit=crop&w=600&q=80" alt="Suculenta">
-                <h2>Suculenta</h2>
-                <p>R$ 20,00</p>
-                <button onclick="adicionarAoCarrinho('Suculenta', 20)">Adicionar ao carrinho</button>
-            </div>
-
-            <!-- Lírio-da-Paz -->
-            <div class="produto">
-                <img src="https://images.unsplash.com/photo-1587049352846-4d5efecbdf25?auto=format&fit=crop&w=600&q=80" alt="Lírio-da-Paz">
-                <h2>Lírio-da-Paz</h2>
-                <p>R$ 35,00</p>
-                <button onclick="adicionarAoCarrinho('Lírio-da-Paz', 35)">Adicionar ao carrinho</button>
-            </div>
-
-            <!-- Bromélia -->
-            <div class="produto">
-                <img src="https://images.unsplash.com/photo-1586864387783-21d0d23a2d55?auto=format&fit=crop&w=600&q=80" alt="Bromélia">
-                <h2>Bromélia</h2>
-                <p>R$ 30,00</p>
-                <button onclick="adicionarAoCarrinho('Bromélia', 30)">Adicionar ao carrinho</button>
-            </div>
-
-            <!-- Espada-de-São-Jorge -->
-            <div class="produto">
-                <img src="https://images.unsplash.com/photo-1581618040503-3ff9a19b5f6a?auto=format&fit=crop&w=600&q=80" alt="Espada-de-São-Jorge">
-                <h2>Espada-de-São-Jorge</h2>
-                <p>R$ 28,00</p>
-                <button onclick="adicionarAoCarrinho('Espada-de-São-Jorge', 28)">Adicionar ao carrinho</button>
-            </div>
-
-        </section>
-
-        <section id="carrinho">
-            <h2>🛍️ Seu Carrinho</h2>
-            <ul id="lista-carrinho"></ul>
-            <p id="total">Total: R$ 0,00</p>
-            <button id="finalizar" onclick="finalizarCompra()">Finalizar Compra</button>
-        </section>
-    </main>
-
-    <footer>
-        <p>© 2025 Verde Vida – Todos os direitos reservados 🌱</p>
-    </footer>
-
-    <script src="script.js"></script>
+<script src="scripts.js"></script>
 </body>
 </html>
