@@ -10,13 +10,14 @@ const clearCartBtn = document.getElementById("clear-cart");
 const checkoutBtn = document.getElementById("checkout");
 const yearEl = document.getElementById("year");
 
-// PRODUTOS (AGORA SÃO PLANTAS)
+// PRODUTOS
 const products = [
-    { id: "1", name: "Bromélia", price: 39.90, img: "https://tse1.mm.bing.net/th/id/OIP.1aIk4JtSaxf31cfj7i3u7QHaE7?rs=1&pid=ImgDetMain&o=7&rm=3" },
-    { id: "2", name: "Cactos", price: 29.90, img: "https://thumbs.dreamstime.com/b/cacto-no-fundo-branco-110935775.jpg" },
-    { id: "3", name: "Orquídea Phalaenopsis", price: 99.90, img: "https://tse3.mm.bing.net/th/id/OIP.TvwTgDxVIojx0T9wM7zN-AHaIh?rs=1&pid=ImgDetMain&o=7&rm=3" },
-    { id: "4", name: "Lavanda", price: 54.90, img: "https://img.freepik.com/fotos-premium/fundo-branco-lavanda-isolado_198067-50.jpg" },
-    { id: "5", name: "Aloe Vera", price: 49.90, img: "https://img.freepik.com/fotos-premium/fundo-branco-da-planta-de-aloe-vera_431161-25023.jpg" },
-    { id: "6", name: "Rosa do Deserto", price: 79.90, img: "https://static.wixstatic.com/media/0f37d7_4960438534fd47bc90ab996c64c6018e~mv2.jpg" },
-    { id: "7", name: "Lírio da Paz", price: 69.90, img: "https://thumbs.dreamstime.com/b/etapa-vegetativa-de-plantas-ervas-maconha-com-fundo-branco-165617426.jpg" },
-    
+    { id: "1", name: "Cacto em Vaso", price: 29.90, img: "https://images.unsplash.com/photo-1602018457560-63f75e8e38e9?w=600" },
+    { id: "2", name: "Samambaia", price: 59.90, img: "https://images.unsplash.com/photo-1568000213-cc6caad00a68?w=600" },
+    { id: "3", name: "Orquídea", price: 99.90, img: "https://images.unsplash.com/photo-1588665710910-4c290c8ad1d1?w=600" },
+    { id: "4", name: "Suculenta", price: 39.90, img: "https://images.unsplash.com/photo-1597013413842-8f41b1e69810?w=600" },
+    { id: "5", name: "Bambu da Sorte", price: 49.90, img: "https://images.unsplash.com/photo-1611902771487-f7e5b231710d?w=600" },
+    { id: "6", name: "Palmeira Areca", price: 179.90, img: "https://images.unsplash.com/photo-1599301713371-212478d2c92f?w=600" },
+    { id: "7", name: "Ficus", price: 89.90, img: "https://images.unsplash.com/photo-1607075772697-c52e5a78e943?w=600" },
+    { id: "8", name: "Lírio da Paz", price: 69.90, img: "https://images.unsplash.com/photo-1572293191159-fba0cd2f61f7?w=600" },
+    { id: "9", name: "Lavanda", price: 59

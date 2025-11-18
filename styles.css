@@ -1,8 +1,8 @@
 :root {
-    --accent: #4CAF50;  /* Verde */
-    --bg: #f1f8f1;      /* Fundo claro */
-    --card: #ffffff;    /* Cor dos cards */
-    --text: #333;       /* Cor do texto */
+    --accent: #2b8aef;
+    --bg: #f7f7f7;
+    --card: #ffffff;
+    --text: #222;
 }
 
 * { box-sizing: border-box; }
@@ -36,7 +36,6 @@ body {
     margin: 0;
     color: var(--accent);
     font-weight: 700;
-    font-size: 1.8rem;
 }
 
 nav button {
@@ -66,7 +65,6 @@ nav button {
     box-shadow: 0 4px 10px rgba(0,0,0,0.04);
     display: flex;
     flex-direction: column;
-    text-align: center;
 }
 
 .product img {
